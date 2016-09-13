@@ -1,0 +1,2 @@
+module OffspringsHelper
+end

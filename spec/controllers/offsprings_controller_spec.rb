@@ -1,10 +1,20 @@
 require 'rails_helper'
+# include Devise::TestHelpers # this should work without this
 
 RSpec.describe OffspringsController, type: :controller do
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
+  feature "User access to offsprings", type: :feature do
+    FactoryGirl.create(:offspring, first_name: "Sally", last_name: "Jones")
+    scenario "visitor views its offsprings" do
+      visit root_path
+      expect(page).to have_content "Sally Jones"
+    end
+    scenario "visitor creates a new offspring" do
+      visit add_offspring_path
+      expect(page).to have_content "Add offspring"
+    end
+    scenario "visitor deletes a offspring" do
+      visit root_path
+      expect(page).to have_content "Delete"
     end
   end
 end

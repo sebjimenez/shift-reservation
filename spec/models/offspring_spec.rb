@@ -16,3 +16,15 @@ RSpec.describe Offspring, type: :model do
     #
   end
 end
+
+
+
+1. Un clase hija se identifica con la clase padre
+Puedes saber qué clase es
+Puedes crearla, modificarla, etc
+Tiene asociado un padre siempre
+5. Cuando destruyes el padre destruyes el hijo
+6. Tiene configuración en el yaml de configuración que especifica qué tipo de hijos tienes
+7. Se hacen las validaciones pertinentes para cada uno (nombre, etc)
+8. Los cursos se definen con un enum
+9. Edad máxima y mínima se definen en el yaml de configuración

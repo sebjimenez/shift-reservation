@@ -1,7 +1,6 @@
 require 'rails_helper'
-# include Devise::TestHelpers # this should work without this
 
-RSpec.describe OffspringsController, type: :controller do
+RSpec.describe Admin::OffspringsController, type: :controller do
   feature "User access to offsprings", type: :feature do
     FactoryGirl.create(:offspring, first_name: "Sally", last_name: "Jones")
     scenario "visitor views its offsprings" do

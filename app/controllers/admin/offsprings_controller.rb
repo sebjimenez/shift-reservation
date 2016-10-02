@@ -1,6 +1,4 @@
 class Admin::OffspringsController < ApplicationController
-
-
   def index
     @offsprings = Offspring.all
   end
@@ -14,7 +12,7 @@ class Admin::OffspringsController < ApplicationController
   end
 
   def new
-    #@offspring = current_user.offsprings.build
+    # @offspring = current_user.offsprings.build
   end
 
   def create
